@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:penouel/screens/culte/index.dart';
 import 'package:penouel/screens/home/index.dart';
 import 'package:penouel/screens/login/index.dart';
+
 
 class Routes {
   static final navigatorKey = GlobalKey<NavigatorState>();
@@ -8,11 +10,13 @@ class Routes {
   static const String home = '/';
   static const String settings = '/settings';
   static const String login = '/login';
+  static const String cultes = '/cultes';
 
   static Map<String, Widget Function(BuildContext)> get routes => {
     home: (context) => const HomeScreen(), // Utilisez la HomeScreen au lieu du Placeholder
     settings: (context) => const Placeholder(),
     login: (context) => const LoginScreen(),
+    cultes: (context) => const CulteScreen(),
   };
 
   // Navigation standard avec animation personnalisée

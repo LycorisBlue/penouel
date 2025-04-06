@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   ];
 
+
   @override
   Widget build(BuildContext context) {
     // Initialiser les tailles responsives
@@ -185,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
         // Déjà sur l'accueil
         break;
       case 1:
-        Routes.navigateTo('/seances');
+        Routes.navigateTo('/cultes');
         break;
       case 2:
         Routes.navigateTo('/presence');

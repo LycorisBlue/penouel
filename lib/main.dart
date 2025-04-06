@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:penouel/core/constants/sizes.dart';
 import 'package:penouel/core/constants/themes.dart';
 import 'package:penouel/services/navigation_service.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
-  runApp(const MyApp());
+  initializeDateFormatting('fr_FR', null).then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
