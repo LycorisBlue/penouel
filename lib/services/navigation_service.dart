@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:penouel/screens/home/index.dart';
+import 'package:penouel/screens/login/index.dart';
 
 class Routes {
   static final navigatorKey = GlobalKey<NavigatorState>();
 
   static const String home = '/';
   static const String settings = '/settings';
-  // Ajoutez ici les routes dont vous avez besoin pour votre nouveau projet
+  static const String login = '/login';
 
   static Map<String, Widget Function(BuildContext)> get routes => {
-    home: (context) => const Placeholder(), // Remplacez par votre HomePage quand elle sera créée
-    settings: (context) => const Placeholder(), // Remplacez par votre SettingsPage quand elle sera créée
-    // Ajoutez ici les constructeurs de pages pour vos nouvelles routes
+    home: (context) => const HomeScreen(), // Utilisez la HomeScreen au lieu du Placeholder
+    settings: (context) => const Placeholder(),
+    login: (context) => const LoginScreen(),
   };
 
   // Navigation standard avec animation personnalisée
